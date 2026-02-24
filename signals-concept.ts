@@ -6,7 +6,7 @@ type Signal<T> = {
     set: (newValue: T) => void;
     update: (fn: (currentValue: T) => T) => void;
 };
-type ReadableSignal<T> = Omit<Signal<T>, 'set' | 'uodate'>;
+type ReadableSignal<T> = Omit<Signal<T>, 'set' | 'update'>;
 
 let currentFn: EffectFn | null = null;
 
